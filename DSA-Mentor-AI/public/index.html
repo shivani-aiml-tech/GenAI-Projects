@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="A beginner-friendly Data Structures and Algorithms learning assistant powered by Gemini." />
+  <title>DSA Mentor AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="DSA Mentor AI home">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>DSA Mentor<span class="brand-accent"> AI</span></span>
+      </a>
+      <div class="sidebar-label">YOUR LEARNING SPACE</div>
+      <div class="side-card">
+        <span class="side-icon">✦</span>
+        <div><strong>Learn by asking</strong><p>One concept at a time.</p></div>
+      </div>
+      <div class="sidebar-label topics-label">EXPLORE TOPICS</div>
+      <div class="topic-list">
+        <button class="topic-button" data-prompt="Explain arrays in simple language with an example."><span>▤</span> Arrays</button>
+        <button class="topic-button" data-prompt="Explain stacks and the LIFO principle with a real-world example."><span>▥</span> Stacks & Queues</button>
+        <button class="topic-button" data-prompt="Explain linked lists and compare them with arrays."><span>⌁</span> Linked Lists</button>
+        <button class="topic-button" data-prompt="Explain recursion with a simple example and its base case."><span>↻</span> Recursion</button>
+        <button class="topic-button" data-prompt="Explain common sorting algorithms and compare their time complexities."><span>↕</span> Sorting</button>
+        <button class="topic-button" data-prompt="Explain Big O notation with beginner-friendly examples."><span>⌗</span> Time Complexity</button>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div><span>Built for curious learners</span>
+        <p>Powered by the Gemini API</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">&lt;/&gt;</span> DSA Mentor AI</div>
+        <div class="topbar-status"><span class="status-dot"></span> AI learning assistant</div>
+        <button class="clear-button" id="clear-chat" type="button" title="Start a new conversation">＋ <span>New chat</span></button>
+      </header>
+
+      <section class="chat-area" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="eyebrow"><span class="sparkle">✦</span> YOUR PERSONAL DSA STUDY BUDDY</div>
+          <h1>Understand the logic.<br /><span>Master the fundamentals.</span></h1>
+          <p class="welcome-copy">Ask a Data Structures & Algorithms question. I'll break it down into simple, clear steps.</p>
+          <div class="suggestion-grid">
+            <button class="suggestion-card" data-prompt="What is an array? Explain with a simple example."><span class="suggestion-icon purple">▤</span><strong>Understand arrays</strong><span>Start with the building blocks</span><span class="card-arrow">↗</span></button>
+            <button class="suggestion-card" data-prompt="What is a stack? Explain LIFO with a real-life example."><span class="suggestion-icon blue">▥</span><strong>Learn stacks</strong><span>Explore LIFO with an example</span><span class="card-arrow">↗</span></button>
+            <button class="suggestion-card" data-prompt="What is Big O notation? Explain O(1), O(n), and O(n²)."><span class="suggestion-icon green">⌗</span><strong>Decode Big O</strong><span>Make complexity less confusing</span><span class="card-arrow">↗</span></button>
+            <button class="suggestion-card" data-prompt="Explain binary search, when it works, and its time complexity."><span class="suggestion-icon orange">⌕</span><strong>Explore algorithms</strong><span>Understand binary search</span><span class="card-arrow">↗</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <div class="composer-wrap">
+        <form class="composer" id="chat-form">
+          <textarea id="question" rows="1" maxlength="4000" placeholder="Ask a DSA question..." aria-label="Your DSA question" required></textarea>
+          <button class="send-button" id="send-button" type="submit" aria-label="Send question"><span>↑</span></button>
+        </form>
+        <div class="composer-note"><span>✦</span> Keep learning, one concept at a time. <span class="note-right">AI can make mistakes — verify important details.</span></div>
+      </div>
+    </main>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
